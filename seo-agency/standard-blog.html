@@ -409,5 +409,35 @@
 
 <script src="js/script.js"></script>
 
+ 
+        <!--
+          PANDA IMAGE SELECTION SCRIPT v1
+          ===============================
+          Captures all image clicks inside the iframe and sends metadata to Bubble via postMessage.
+          Metadata captured: url, width, height, alt
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-image-selection-v1.js" defer></script>
+
+        <!--
+          PANDA BRANDING SCRIPT
+          ====================
+          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
+        <!--
+          PANDA AUTO RELOAD SCRIPT
+          ====================
+          Handles Panda HMR solution built on railway to hot reload changes in preview.
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script>
+        const es = new EventSource("/__hmr");
+        es.onmessage = () => location.reload();
+        </script>
+
+
+
 </body>
 </html>
